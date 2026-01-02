@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f5f5f5;
+    overflow: hidden;
+    /* cursor: none; */
+}
+
+.cursor{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: #333;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease;
+    z-index: 1000;
+}
+
+.container{
+    position: relative;
+    width: 80rem;
+    height: 40rem;
+    padding: 30px;
+    background: #b0a6a6;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.navbar .logo{
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+img {
+    width: 25px;
+    height: 20px;
+}
+
+.navbar .nav-links{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links li a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover{
+    color: #007BFF;
+}
+
+.popup-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60rem;
+    height: 30rem;
+    background: #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.popup{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.content{
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    height: calc(100% - 70px);
+    overflow-y: auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.content header{
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.content header .ull.ull-times{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: #2e2b2b;
+    cursor: pointer;
+}
+
+.ull.ull-times:hover{
+    color: #ff0000;
+}
+
+form .row{
+    margin-bottom: 15px;
+}
+
+form .row.title input,
+form .row.description textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+form .row.title input:focus,
+form .row.description textarea:focus{
+    border-color: #86832c;
+}
+
+form .row.description textarea{
+    resize: none;
+    height: 100px;
+}
+
+form .row.buttons button{
+    padding: 10px 20px;
+    background: #86832c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form .row.buttons button:hover{
+    background: #6b6925;
+}
+form .row.buttons button:active{
+    transform: scale(0.9);
+}
+
+@media (max-width: 900px){
+    .container{
+        width: 90%;
+        height: auto;
+    }
+    .popup-box{
+        width: 90%;
+        height: auto;
+    }
+}
+
