@@ -87,3 +87,52 @@ function updateNote(noteId, title, filterDesc) {
     addBtn.innerText = "Update Task";
 }
 
+addBtn.addEventListener("click", e => {
+    e.preventDefault();
+    let title = titleTag.value.trim(),
+    description = descTag.value.trim();
+    if(title || description){
+        let dateObj = new Date(),
+        month = months[dateObj.getMonth()],
+        day = dateObj.getDate(),
+        year = dateObj.getFullYear();
+
+        let noteInfo = {title, description, date: `${month} ${day}, ${year}`};
+        if(!isUpdate){
+            notes.push(noteInfo);
+        } else {
+            isUpdate = false;
+            notes[updateId] = noteInfo;
+        }
+        localStorage.setItem("notes", JSON.stringify(notes));
+        closeIcon.click();
+        showNotes();
+    }   
+});
+
+const cursor = document.querySelector(".cursor");
+var timeout;
+
+document.addEventListener("mousemove", e => {
+    let x = e.pageX;
+    let y = e.pageY;
+
+    cursor.style.left = x + "px";
+    cursor.style.top = y + "px";
+    cursor.style.display = "block";
+
+    function mouseStopped(){
+        cursor.style.display = "none";
+    }
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+        mouseStopped();
+    }, 1000);
+});
+document.addEventListener("mouseout", () => {
+    cursor.style.display = "none";
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+        cursor.style.display = "none";
+    }, 1000);
+});
