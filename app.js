@@ -130,9 +130,18 @@ document.addEventListener("mousemove", e => {
     }, 1000);
 });
 document.addEventListener("mouseout", () => {
-    cursor.style.display = "none";
+    cursor.style.display = "block";
     clearTimeout(timeout);
     timeout = setTimeout(() => {
         cursor.style.display = "none";
     }, 1000);
+});
+
+let hireme=document.querySelector(".hire-me");
+hireme.addEventListener("click",()=>{
+    window.open("https://www.linkedin.com/in/ashish-kumar-634b251ba/" , "_blank");
+});
+let logo=document.querySelector(".logo img");
+logo.addEventListener("click",()=>{
+    window.location.reload();
 });
