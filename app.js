@@ -57,5 +57,33 @@ function showNotes(){
     });
 }
 showNotes();
-                                    
+
+function showMenu(elem){
+    elem.parentElement.classList.add("show");
+    document.addEventListener("click", e => {
+        if(e.target.tagName != "I" || e.target != elem){
+            elem.parentElement.classList.remove("show");
+        }
+    });
+}
+
+function deleteNote(noteId) {
+    let confirmDel = confirm("Do you really want to delete this note?");
+    if (confirmDel) {
+        notes.splice(noteId, 1);
+        localStorage.setItem("notes", JSON.stringify(notes));
+        showNotes();
+    }
+}
+
+function updateNote(noteId, title, filterDesc) {
+    let description = filterDesc.replaceAll('<br/>', '\n');
+    isUpdate = true;
+    updateId = noteId;
+    addBox.click();
+    titleTag.value=title;
+    descTag.value = description;
+    popupTitle.innerText = "Update a task";
+    addBtn.innerText = "Update Task";
+}
 
