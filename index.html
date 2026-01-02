@@ -5,9 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 <body>
-    <nav></nav>
+    <div class="cursor"></div>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="" alt="">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <button data-text="Awesome" class="button" id="hireme">
+            <span class="actual-text">&nbsp;Hire_Me&nbsp;</span>
+            <span class="hover-text" aria-hidden="true">&nbsp;Hire_Me&nbsp;</span>
+        </button>
+    </nav>
+    <div class="popup-box">
+        <div class="popup">
+            <div class="content">
+                <header>
+                    <p></p>
+                    <i class="ull ull-times"></i>
+                </header>
+                <form action="#">
+                    <div class="row title ">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" spellcheck="false" placeholder="Task Title">
+                    </div>
+                    <div class="row description">
+                        <label for="description">Description</label>
+                        <textarea id="description" spellcheck="false" placeholder="Task Description"></textarea>
+                    </div>
+                    <div class="row date">
+                        <label for="date">Date</label>
+                        <input type="date" id="date">
+                    </div>  
+                    <div class="row buttons">
+                        <button type="submit" class="add-btn">Add Task</button>
+                        <button type="button" class="cancel-btn">Cancel</button>
+                    </div>
+                    <button></button> 
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="wrappers"></div>
+    <div class="wrapper">
+        <li class="add-box" id="add">
+           <div class="icons"><i class="ull ull-plus"></i></div>
+           <p>Add New Task</p>
+        </li>
+        <li class="add-box" id="remove">
+              <div class="icons"><i class="ull ull-times"></i></div>
+              <p>Remove All Tasks</p>
+        </li>
+    </div>
+
+
+    <script src="https://replit.com/public/js/replit-badge.js" theme="dark"></script>
     <script src="app.js"></script>
 </body>
 </html>
