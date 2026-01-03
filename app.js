@@ -139,7 +139,7 @@ document.addEventListener("mouseout", () => {
 
 let hireme=document.querySelector(".hire-me");
 hireme.addEventListener("click",()=>{
-    window.open("https://www.linkedin.com/in/ashish-kumar-634b251ba/" , "_blank");
+    window.open("https://www.linkedin.com/in/meenesh/" , "_blank");
 });
 let logo=document.querySelector(".logo img");
 logo.addEventListener("click",()=>{
