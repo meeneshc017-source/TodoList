@@ -227,3 +227,7 @@ form .row.buttons button:active{
 .wrapper #remove{
     display: none;
 }
+
+.icons .ull.ull-times{
+    cursor: pointer;
+}
