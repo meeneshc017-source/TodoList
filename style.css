@@ -193,8 +193,37 @@ form .row.buttons button:active{
     text-align: center;
 }
 
-.wrapper .icon{
+.wrapper .add-box{
+    font-size: 20px;
+    color: #86832c;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.wrapper .add-box:hover{
+    color: #6b6925;
+}
+
+.wrapper #add{
+    display: none;
+}
+
+.wrapper .icons{
     font-size: 50px;
     color: #86832c;
     margin-bottom: 10px;
+}
+
+.icons .ull.ull-plus{
+    cursor: pointer;
+
+}
+
+.wrapper .icons .ull.ull-plus:hover{
+    color: #6b6925;
+}
+
+.wrapper #remove{
+    display: none;
 }
