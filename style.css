@@ -231,3 +231,11 @@ form .row.buttons button:active{
 .icons .ull.ull-times{
     cursor: pointer;
 }
+
+.add-box .ull.ull-times:hover{
+    color: #ff0000;
+}
+
+.icons .ull.ull-times:hover{
+    color: #ff0000;
+}
