@@ -137,10 +137,11 @@ document.addEventListener("mouseout", () => {
     }, 1000);
 });
 
-let hireme=document.querySelector(".hire-me");
+let hireme=document.querySelector("#hireme");
 hireme.addEventListener("click",()=>{
-    window.open("https://www.linkedin.com/in/meenesh/" , "_blank");
+    window.open("https://www.linkedin.com/in/meenesh-chaudhary017" , "_blank");
 });
+
 let logo=document.querySelector(".logo img");
 logo.addEventListener("click",()=>{
     window.location.reload();
