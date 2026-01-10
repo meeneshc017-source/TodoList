@@ -91,7 +91,7 @@ addBtn.addEventListener("click", e => {
     e.preventDefault();
     let title = titleTag.value.trim(),
     description = descTag.value.trim();
-    if(title || description){
+    if (title.length > 0) {
         let dateObj = new Date(),
         month = months[dateObj.getMonth()],
         day = dateObj.getDate(),
