@@ -12,6 +12,13 @@ const months = ["January", "February", "March", "April", "May", "June", "July", 
 let notes = JSON.parse(localStorage.getItem("notes") || "[]");
 let isUpdate = false, updateId;
 
+const themeBtn = document.querySelector("#themeToggle");
+
+themeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light");
+    themeBtn.textContent = document.body.classList.contains("light") ? "🌞" : "🌙";
+});
+
 addBox.addEventListener("click", () => {
     popupTitle.innerText = "Add a new task";
     addBtn.innerText = "Add Task";
