@@ -142,6 +142,16 @@ hireme.addEventListener("click",()=>{
     window.open("https://www.linkedin.com/in/meenesh-chaudhary017" , "_blank");
 });
 
+const cancelBtn = popupBox.querySelector(".cancel-btn");
+
+cancelBtn.addEventListener("click", () => {
+    isUpdate = false;
+    titleTag.value = "";
+    descTag.value = "";
+    popupBox.classList.remove("show");
+    document.body.style.overflow = "auto";
+});
+
 let logo=document.querySelector(".logo img");
 logo.addEventListener("click",()=>{
     window.location.reload();
