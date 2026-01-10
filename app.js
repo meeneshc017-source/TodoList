@@ -58,14 +58,26 @@ function showNotes(){
 }
 showNotes();
 
+// function showMenu(elem){
+//     elem.parentElement.classList.add("show");
+//     document.addEventListener("click", e => {
+//         if(e.target.tagName != "I" || e.target != elem){
+//             elem.parentElement.classList.remove("show");
+//         }
+//     });
+// }
+
 function showMenu(elem){
+    document.querySelectorAll(".settings").forEach(s => s.classList.remove("show"));
     elem.parentElement.classList.add("show");
-    document.addEventListener("click", e => {
-        if(e.target.tagName != "I" || e.target != elem){
+
+    document.onclick = (e) => {
+        if (!elem.parentElement.contains(e.target)) {
             elem.parentElement.classList.remove("show");
         }
-    });
+    };
 }
+
 
 function deleteNote(noteId) {
     let confirmDel = confirm("Do you really want to delete this note?");

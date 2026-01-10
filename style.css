@@ -611,6 +611,33 @@ body {
     color: #38bdf8;
 }
 
+/* ===== Light Theme ===== */
+body.light {
+    background: #f8fafc;
+    color: #0f172a;
+}
+
+body.light .note,
+body.light .popup,
+body.light .add-box,
+body.light .menu {
+    background: #ffffff;
+    color: #0f172a;
+}
+
+body.light .nav-links a {
+    color: #0f172a;
+}
+
+/* Toggle button */
+.theme-btn {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+
 /* ===== Hire Me Button ===== */
 .button {
     position: relative;
