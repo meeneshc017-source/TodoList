@@ -637,7 +637,6 @@ body.light .nav-links a {
     cursor: pointer;
 }
 
-
 /* ===== Hire Me Button ===== */
 .button {
     position: relative;
@@ -872,3 +871,6 @@ textarea {
         display: none;
     }
 }
+
+
+
