@@ -19,6 +19,14 @@ themeBtn.addEventListener("click", () => {
     themeBtn.textContent = document.body.classList.contains("light") ? "🌞" : "🌙";
 });
 
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+});
+
+
 addBox.addEventListener("click", () => {
     popupTitle.innerText = "Add a new task";
     addBtn.innerText = "Add Task";
