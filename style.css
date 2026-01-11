@@ -674,6 +674,35 @@ body.light .nav-links a {
     transform: translateY(0);
 }
 
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        right: 5%;
+        background: #020617;
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 10px;
+        display: none;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
+ 
+
 /* ===== Wrapper ===== */
 .wrapper {
     display: grid;
