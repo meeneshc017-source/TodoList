@@ -26,6 +26,22 @@ menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("show");
 });
 
+// const priorityTag = document.querySelector("#priority");
+
+// let priority = priorityTag.value;
+// let noteInfo = {
+//     title,
+//     description,
+//     priority,
+//     date: `${month} ${day}, ${year}`
+// };
+
+// let liTag = `
+// <li class="note ${note.priority}">
+
+// priorityTag.value = "low";
+
+
 
 addBox.addEventListener("click", () => {
     popupTitle.innerText = "Add a new task";
@@ -60,10 +76,10 @@ function showNotes(){
                         <div class="bottom-content">
                             <span>${note.date}</span>
                             <div class="settings">
-                                <i onclick="showMenu(this)" class="ull ull-ellipsis-h"></i>
+                                <i onclick="showMenu(this)" class="uil uil-ellipsis-h"></i>
                                 <ul class="menu">
-                                    <li onclick="updateNote(${id}, '${note.title}', '${filterDesc}')"><i class="ull ull-pen"></i>Edit</li>
-                                    <li onclick="deleteNote(${id})"><i class="ull ull-trash"></i>Delete</li>
+                                    <li onclick="updateNote(${id}, '${note.title}', '${filterDesc}')"><i class="uil uil-pen"></i>Edit</li>
+                                    <li onclick="deleteNote(${id})"><i class="uil uil-trash"></i>Delete</li>
                                 </ul>
                             </div>
                         </div>
